@@ -26,9 +26,10 @@ header {
   padding: 0 10rem;
   overflow: hidden;
   color: #fff;
+  max-width: 100vw;
 }
 nav {
-  width: 15%;
+  width: 15vw;
 }
 ul {
   display: flex;
@@ -41,6 +42,7 @@ li {
   transition: all 0.5s ease-out;
   padding: 0.5rem;
   color: #fff;
+  cursor: pointer;
 }
 a {
   text-decoration: none;
@@ -48,6 +50,7 @@ a {
   font-size: 1.1rem;
 }
 li:hover {
+  padding: 0.5rem;
   background-color: lightgray;
   border-radius: 0.3rem;
   border-radius: 0.3rem;
@@ -57,5 +60,8 @@ li:hover {
   background-color: rgb(143, 143, 143);
   border-radius: 0.3rem;
   color: rgb(65, 63, 63);
+}
+h2 {
+  cursor: default;
 }
 </style>

@@ -43,14 +43,12 @@ export default {
       center: [20, 0],
       tile: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
       urlIcon: 'https://www.flaticon.com/svg/static/icons/svg/426/426833.svg',
+      isLoading: false,
     };
   },
-  updated() {
-    console.log(this.start);
+  created() {
+    this.loadData();
   },
-  // created() {
-  //   this.loadData();
-  // },
   methods: {
     //Fetching Data:
     async loadData() {
@@ -81,6 +79,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   min-height: 100vh;
+  max-width: 100vw;
 }
 .map {
   margin-top: 2rem;

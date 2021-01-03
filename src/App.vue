@@ -25,7 +25,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: rgb(33, 33, 33);
-  color: #2c3e50;
-  width: 100vw;
+  max-width: 100vw;
 }
 </style>

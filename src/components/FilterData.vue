@@ -34,9 +34,10 @@ export default {
       }
       await this.loadData();
       const filter = this.fireData.filter((storm) => {
-        return storm.date !== this.selectedDate;
+        return storm.date === this.selectedDate;
       });
       this.fireFilterData = filter;
+      console.log(this.fireFilterData);
       this.$emit('data-filtered', this.fireFilterData);
     },
   },
@@ -66,6 +67,16 @@ select {
   margin: 1rem;
   padding: 0.5rem;
   font-size: 1rem;
+  color: #fff;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: 5px;
+  border: 1px solid #dfdfdf;
+  border-radius: 2px;
 }
 option {
   font-size: 1rem;
@@ -76,8 +87,10 @@ button {
   border-radius: 2rem;
   background-color: transparent;
   color: #fff;
+  margin: 0 3rem;
   padding: 0.5rem 1rem;
   font-size: 1.3rem;
+  cursor: pointer;
 }
 button:hover {
   border: 1px solid transparent;

@@ -74,12 +74,13 @@ export default {
 .infoPage {
   overflow: hidden;
   height: 93vh;
-  width: 100vw;
+  max-width: 100vw;
+  cursor: default;
 }
 .info {
   align-items: left;
   margin-left: 20rem;
-  margin-top: 10rem;
+  margin-top: 4rem;
 }
 .heading {
   text-align: center;
@@ -121,6 +122,7 @@ button {
   color: #fff;
   padding: 0.5rem 1rem;
   font-size: 1.3rem;
+  cursor: pointer;
 }
 button:hover {
   border: 1px solid transparent;
@@ -129,9 +131,9 @@ button:hover {
   font-weight: 500;
 }
 button:disabled {
-  border: 1px solid transparent;
-  background-color: rgb(111, 111, 111);
+  border: 1px solid rgb(63, 63, 63);
   color: rgb(63, 63, 63);
+  background-color: transparent;
   font-weight: 500;
 }
 img {
