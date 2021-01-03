@@ -1,26 +1,31 @@
 <template>
   <div id="app">
-    <Map />
+    <TheHeader />
+    <router-view />
   </div>
 </template>
 
 <script>
-import Map from './components/Map.vue';
+import TheHeader from './components/TheHeader.vue';
 
 export default {
   name: 'App',
-  components: { Map },
+  components: { TheHeader },
 };
 </script>
 
 <style>
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  display: flex;
-  justify-content: center;
+  background-color: rgb(33, 33, 33);
   color: #2c3e50;
-  margin-top: 60px;
+  width: 100vw;
 }
 </style>

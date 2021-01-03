@@ -1,6 +1,6 @@
 <template>
   <form @submit.prevent="filterData">
-    <label for="date">Filter by Date: </label>
+    <label for="date">Filter by Date</label>
     <select name="date" id="date" v-model="selectedDate">
       <option v-for="date in availableDates" :key="date"> {{ date }}</option>
     </select>
@@ -14,7 +14,7 @@ export default {
     return {
       fireFilterData: this.fireData,
       availableDates: [
-        '',
+        'All locations',
         '2020-08-21',
         '2020-08-22',
         '2020-08-23',
@@ -29,7 +29,7 @@ export default {
   },
   methods: {
     async filterData() {
-      if (this.selectedDate === '') {
+      if (this.selectedDate === 'All locations') {
         return this.loadData();
       }
       await this.loadData();
@@ -45,16 +45,43 @@ export default {
 
 <style scoped>
 form {
-  background-color: rgb(223, 240, 200);
-  padding: 1rem;
   display: flex;
   flex-direction: column;
-  margin: 3rem 20rem;
+  align-self: center;
+  width: 20%;
+  border: 1px #fff solid;
+  padding: 2rem;
+  border-radius: 1rem;
+  margin: 3rem;
+}
+label {
+  color: #fff;
+  font-size: 1.5rem;
+  text-align: center;
+}
+select {
+  border: none;
+  width: 50%;
+  align-self: center;
+  margin: 1rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+option {
+  font-size: 1rem;
 }
 button {
-  border: none;
-  padding: 1rem;
-  background-color: burlywood;
-  font-size: 1rem;
+  transition: 0.5s all ease;
+  border: 1px solid #fff;
+  border-radius: 2rem;
+  background-color: transparent;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  font-size: 1.3rem;
+}
+button:hover {
+  border: 1px solid transparent;
+  background-color: #fff;
+  color: rgb(63, 63, 63);
 }
 </style>

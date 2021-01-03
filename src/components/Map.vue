@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <div id="map">
-      <l-map :zoom="zoom" :center="center">
+  <div class="mapPage">
+    <div class="map">
+      <l-map :zoom="zoom" :center="center" class="map">
         <l-tile-layer :url="tile"></l-tile-layer>
         <l-marker
           v-for="fire in fireData"
@@ -29,15 +29,24 @@ import 'leaflet/dist/leaflet.css';
 import FilterData from './FilterData.vue';
 
 export default {
-  components: { LMap, LTileLayer, LMarker, LIcon, FilterData },
+  components: {
+    LMap,
+    LTileLayer,
+    LMarker,
+    LIcon,
+    FilterData,
+  },
   data() {
     return {
       fireData: [],
       zoom: 2,
-      center: [0, 0],
+      center: [20, 0],
       tile: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
       urlIcon: 'https://www.flaticon.com/svg/static/icons/svg/426/426833.svg',
     };
+  },
+  updated() {
+    console.log(this.start);
   },
   // created() {
   //   this.loadData();
@@ -67,10 +76,16 @@ export default {
 </script>
 
 <style scoped>
-#map {
-  height: 75vh;
-  width: 100vw;
-  border: 1px solid red;
-  border-radius: 1rem;
+.mapPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+}
+.map {
+  margin-top: 2rem;
+  height: 70vh;
+  width: auto;
+  padding: 0 10rem;
 }
 </style>
