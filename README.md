@@ -1,24 +1,26 @@
-# fire-storms-map
+# Fire Storms Map ❤️‍🔥
 
-## Project setup
-```
+## 🗺️ Why?
+
+With this app, thanks to the provided data from NASA, you can see the world fire storms!
+
+
+## 🕹️ Try Demo Project
+
+Check out this app --> [Fire Storms Map](https://firestorm-300313.web.app/)
+
+
+## 💚 Developed with VUE
+
+Awesome framework technology that allows users to create scalable front-end websites.
+
+
+## 🧰 Before start
+
 npm install
-```
 
-### Compiles and hot-reloads for development
-```
+
+## 🏁 Start Locally
+
 npm run serve
-```
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
