@@ -71,10 +71,17 @@ export default {
       } catch (e) {
         console.log(e);
       }
-      this.messages.push(formMessage);
       this.isLoading = false;
-      console.log(this.messages);
       this.$router.push('/home');
+    },
+    //All messages available from users
+    async getMessages() {
+      const response = await axios.get(
+        'https://messages-8c3eb-default-rtdb.firebaseio.com/messages.json'
+      );
+      const data = await response.data;
+      this.messages = data;
+      console.log(this.messages);
     },
   },
 };
